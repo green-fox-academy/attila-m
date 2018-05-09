@@ -1,0 +1,58 @@
+body {
+    font-family: consolas, courier;  
+   margin: 0 auto;
+}
+
+nav {
+    background-color: #333333;
+    /* position: fixed; */
+    /* padding: 20px 40px; */
+    width: 100%;
+    padding: 30px 40px;
+    text-align: right;
+}
+
+main {
+    padding: 0 10%;
+}
+
+h1, h2 {
+    font-family: "Roboto"
+}
+
+p {
+    line-height: 1.5;
+    /* height: 60px; */
+}
+
+a {
+    color: #ff0099;
+}
+
+#logo {
+    float: left;
+}
+
+#navigation {
+    padding: 0px 100px;
+    /* margin: 50px 50px; */
+    
+}
+
+.myself h1{
+   position: relative;
+    margin-top: 100px;
+}
+.myself h2{
+    color: #ff0099;
+}
+
+.technology h1{
+    text-align: center;
+}
+
+.break {
+    text-align: center;
+    /* padding: 100px 100px; */
+    margin: 80px 0px;
+}

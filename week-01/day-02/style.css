@@ -1,0 +1,15 @@
+h1, h2 {
+    text-align: center
+}
+
+article {
+    margin: 0 auto;
+    font-size: 21px;
+    font-family: "sans-serif";
+}
+
+p {
+    line-height: 28px;
+    font-style: italic;
+    
+}
