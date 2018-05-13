@@ -1,16 +1,16 @@
 public class DrawPyramid {
     public static void main(String[] args) {
-        int pyramid = 6;
+        int pyramid = 4;
 
-        for (int i = 1; i < pyramid; i++) {
+        for (int i = 1; i <= pyramid; i++) {
 
-            for (int j = i; j < pyramid; j++)
+            for (int j = i; j < pyramid; j++) {
                 System.out.print(" ");
-
-            for (int k = 1; k < (i * 2); k++)
+            }
+            for (int k = 1; k < (i * 2); k++) {
                 System.out.print("*");
+            }
             System.out.println(" ");
-
         }
     }
 }
