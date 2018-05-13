@@ -6,9 +6,11 @@ public class DrawTriangle {
         System.out.println("Please enter then number for the triangle.");
         int triangleNumber = triangle.nextInt();
 
-        for (int triangleLine = 0; triangleLine < triangleNumber; triangleLine++) {
-            System.out.println(triangleLine);
-
+        for (int triangleRow = -1; triangleRow < triangleNumber; triangleRow++) {
+            for (int triangleCol = -1; triangleCol < triangleRow; triangleCol++) {
+                System.out.print("*");
+            }
+            System.out.println(" ");
         }
     }
 }
