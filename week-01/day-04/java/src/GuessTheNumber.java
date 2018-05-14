@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
     public static void main(String[] args) {
-
-        int numberStored = 8;
+      int numberStored = 8;
 
         Scanner guess = new Scanner(System.in);
         System.out.println("Guess the number.");
