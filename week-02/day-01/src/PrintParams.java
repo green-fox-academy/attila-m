@@ -11,13 +11,15 @@ public class PrintParams {
     printParams(a, b, c, d, e);
 
   }
+
   public static void printParams(String... params) {
 
     for (String param : params) {
       System.out.print(param);
-
     }
+
   }
+
 }
 
 //  Create the usual class wrapper
