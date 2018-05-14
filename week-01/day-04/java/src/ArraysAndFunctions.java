@@ -1,4 +1,4 @@
-import java.util.Arrays;
+/* import java.util.Arrays;
 
 public class ArraysAndFunctions {
 
@@ -47,3 +47,5 @@ public class ArraysAndFunctions {
   }
 
 }
+
+*/
