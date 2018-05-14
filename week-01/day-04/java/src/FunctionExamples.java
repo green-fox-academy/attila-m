@@ -6,7 +6,7 @@ public class FunctionExamples {
     float average = average(numbers);
     System.out.println(average);
 
-    int n = 3;
+     int n = 3;
     n = increaseNumber(n);
     System.out.println(n);
 
@@ -58,6 +58,7 @@ public class FunctionExamples {
     return numbers;
 
   }
+
   public static int increaseNumber(int number) {
     return number + 1;
   }
