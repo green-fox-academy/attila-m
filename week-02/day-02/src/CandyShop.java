@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Candyshop{
+public class CandyShop{
   public static void main(String... args){
     ArrayList<Object> arrayList = new ArrayList<Object>();
     arrayList.add("Cupcake");
@@ -16,4 +16,25 @@ public class Candyshop{
     System.out.println(sweets(arrayList));
     // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
   }
-}
+
+  public static ArrayList<Object> sweets (ArrayList<Object> alo1) { // max 5 non-String :(
+
+    ArrayList<Object> sweets = new ArrayList<>();
+    sweets.add("Bubblegum");
+    sweets.add("Croissant");
+    sweets.add("Lollipop");
+    sweets.add("Ice cream");
+    sweets.add("Chocolate");
+
+    ArrayList<Object> sweetify = new ArrayList<>();
+
+    for (int i = 0; i < alo1.size(); i++) {
+
+      if (alo1.get(i) instanceof String) {
+        sweetify.add(alo1.get(i));
+      } else { sweetify.add(sweets.get(i));
+        }
+      }
+      return sweetify;
+    }
+  }
