@@ -13,7 +13,6 @@ public class AppendA {
     return A;
 
   }
-
 }
 
 
