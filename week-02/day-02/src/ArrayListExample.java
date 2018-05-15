@@ -24,5 +24,7 @@ public class ArrayListExample {
     }
     System.out.println(intArrayList.size());
 
+    System.out.println("THIS: " + intArrayList.set(3, intArrayList.get(1)));
+
   }
 }
