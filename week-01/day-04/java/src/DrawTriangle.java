@@ -3,14 +3,23 @@ import java.util.Scanner;
 public class DrawTriangle {
     public static void main(String[] args) {
         Scanner triangle = new Scanner(System.in);
-        System.out.println("Please enter then number for the triangle.");
+        System.out.println("Please enter a number");
         int triangleNumber = triangle.nextInt();
+
+        Scanner lines = new Scanner(System.in);
+        System.out.println("How many lines you want?");
+        int lineNumber = lines.nextInt();
 
         for (int triangleRow = -1; triangleRow < triangleNumber; triangleRow++) {
             for (int triangleCol = -1; triangleCol < triangleRow; triangleCol++) {
                 System.out.print("*");
             }
             System.out.println(" ");
+
+        }
+
+        for (int i = 0; i < lineNumber ; i++) {
+            System.out.print(" -");
         }
     }
 }

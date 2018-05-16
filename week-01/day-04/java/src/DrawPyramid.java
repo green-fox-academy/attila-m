@@ -1,6 +1,6 @@
 public class DrawPyramid {
     public static void main(String[] args) {
-        int pyramid = 4;
+        int pyramid = 13;
 
         for (int i = 1; i <= pyramid; i++) {
 

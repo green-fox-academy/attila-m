@@ -19,6 +19,11 @@ public class QuoteSwap{
 
     ArrayList<String> swapped = new ArrayList<>();
 
+    swapped.
+
+
+
+
     return swapped;
   }
 
