@@ -12,26 +12,23 @@ public class CopyFile {
     String fileTwo = "src/copyTo.txt";
 
     copier(fileOne, fileTwo);
+    System.out.println(copier(fileOne, fileTwo));
 
   }
 
-  public static boolean copier (String s1, String s2) {
+  public static boolean copier(String s1, String s2) {
 
     Path fileOne = Paths.get(s1);
     Path fileTwo = Paths.get(s2);
+
+    boolean success = true;
     try {
       ArrayList<String> listFull = new ArrayList<>(Files.readAllLines(fileOne));
       Files.write(fileTwo, listFull);
-
     } catch (Exception e) {
-      System.out.println("Woops, something didn't work out.");
+        System.out.println("Woops, something didn't work out.");
+        success = false;
     }
-
-    return true; // Not returning anything...
-
+    return success;
   }
 }
-
-// Write a function that copies a file to an other
-// It should take the filenames as parameters
-// It should return a boolean that shows if the copy was successful
