@@ -10,7 +10,7 @@ public class E05HorizontalLines {
     // The x and y coordinates of the line's starting point
     // and draws a 50 long horizontal line from that point.
     // Draw 3 lines with that function. Use loop for that.
-    
+
     for (int i = 0; i < 42; i++) {
 
       int randomX = (int)(Math.random() * WIDTH);
