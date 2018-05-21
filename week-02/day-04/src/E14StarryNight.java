@@ -25,8 +25,8 @@ public class E14StarryNight {
 
     for (int i = 0; i < starNum ; i++) {
 
-      int gray = (int) Math.floor(Math.random() * ( 256 - 100)) + 100;
-      Color randomColorGrey = new Color(gray, gray, gray);
+      int grey = (int) Math.floor(Math.random() * ( 256 - 100)) + 100;
+      Color randomColorGrey = new Color(grey, grey, grey);
       graphics.setColor(randomColorGrey);
       starDraw(starNum, graphics);
     }

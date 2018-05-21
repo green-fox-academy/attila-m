@@ -8,20 +8,17 @@ public class E16PurpleStep3D {
   public static void mainDraw(Graphics graphics) {
     // Reproduce this:
     // [https://github.com/green-fox-academy/teaching-materials/blob/master/workshop/drawing/purple-steps-3d/r4.png]
-    int a = 0;
+    int a = 20;
     purpleSteps3dDraw(a, graphics);
-
 
   }
   public static void purpleSteps3dDraw (int a, Graphics graphics) {
     int b = 20;
-    for (int i = 1; i <= 6; i++) {
+    for (int i = 1; i <= 10; i++) {
+      Color purple = new Color(128,0,128);
+      graphics.setColor(purple);
       graphics.fill3DRect(a, a, b, b, true);
-      a += a + b;
-      b += b;
-      if (a > (2*b) ) {
-        a = a+b;
-      }
+      a += b;
     }
   }
 
