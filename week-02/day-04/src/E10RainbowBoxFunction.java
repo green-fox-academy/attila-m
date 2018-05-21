@@ -22,7 +22,7 @@ public class E10RainbowBoxFunction {
       int randomSize = (int)(Math.random() * WIDTH);
 
       rainbowRectangleDrawer(randomSize,randomColor, graphics);
-      
+
     }
   }
 

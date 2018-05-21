@@ -1,5 +1,5 @@
 # attila-m
-repos I created on day-03:
+my other repositories:
 
 https://github.com/attila-m/third-day -trying out github<br>
 https://github.com/attila-m/patchwork -git-it excercise<br>
