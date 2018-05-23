@@ -12,23 +12,26 @@ public class Dominoes {
 
     List<Domino> sortedDominoes = new ArrayList<>();
     sortedDominoes.add(dominoes.get(0));
-    sortedDominoes.add(dominoes.get(4));
-    sortedDominoes.add(dominoes.get(1));
-    sortedDominoes.add(dominoes.get(3));
-    sortedDominoes.add(dominoes.get(5));
-    sortedDominoes.add(dominoes.get(2));
 
+    for (int i = 0; sortedDominoes.size() < dominoes.size(); i++) {
+      for (int j = 0; j < dominoes.size(); j++) {
+        if (sortedDominoes.get(i).getValues()[1] == dominoes.get(j).getValues()[0]) {
+          sortedDominoes.add(dominoes.get(j));
+        }
+      }
+    }
     System.out.println(sortedDominoes);
   }
 
   static List<Domino> initializeDominoes() {
     List<Domino> dominoes = new ArrayList<>();
-    dominoes.add(new Domino(5, 2)); //0
-    dominoes.add(new Domino(4, 6)); //1
-    dominoes.add(new Domino(1, 5)); //2
-    dominoes.add(new Domino(6, 7)); //3
-    dominoes.add(new Domino(2, 4)); //4
-    dominoes.add(new Domino(7, 1)); //5
+    dominoes.add(new Domino(5, 2));
+    dominoes.add(new Domino(4, 6));
+    dominoes.add(new Domino(1, 5));
+    dominoes.add(new Domino(6, 7));
+    dominoes.add(new Domino(2, 4));
+    dominoes.add(new Domino(7, 1));
+
     return dominoes;
   }
 
