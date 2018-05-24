@@ -2,9 +2,7 @@ public class E01Counter {
 
   public static void main(String[] args) {
 
-    int n = 100; // 10 000 mar nem mukodik :(((
-
-    recursiveCounter(n);
+   recursiveCounter(100); //10 000 mar nem mukodik :(((
 
   }
 
