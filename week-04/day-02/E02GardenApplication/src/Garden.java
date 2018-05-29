@@ -7,4 +7,8 @@ public class Garden {
   public Garden() {
     gardenPlants = new ArrayList<>();
   }
+
+  public void addPlant(Plant plant) {
+    this.gardenPlants.add(plant);
+  }
 }
