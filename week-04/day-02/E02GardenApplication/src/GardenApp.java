@@ -13,5 +13,7 @@ public class GardenApp {
     secretGarden.addPlant(purpleTree);
     secretGarden.addPlant(orangeTree);
 
+    secretGarden.gardenStatus();
+
+    }
   }
-}

@@ -11,4 +11,10 @@ public class Garden {
   public void addPlant(Plant plant) {
     this.gardenPlants.add(plant);
   }
+
+  public void gardenStatus() {
+    for (int i = 0; i < gardenPlants.size() ; i++) {
+      gardenPlants.get(i).needsWater();
+    }
+  }
 }
