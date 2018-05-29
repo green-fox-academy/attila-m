@@ -1,9 +1,9 @@
 public class Plant {
   String name;
-  int waterStatus;
+  int waterLevel;
 
   public Plant(String name, int waterStatus) {
     this.name = name;
-    this.waterStatus = waterStatus;
+    this.waterLevel = waterStatus;
   }
 }
