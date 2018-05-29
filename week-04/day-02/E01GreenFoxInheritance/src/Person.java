@@ -4,7 +4,7 @@ public class Person {
   int age;
   String gender;
 
-  public void intorudce() {
+  public void introduce() {
     System.out.println("Hi, I am " + name + ", " + age + " year old " + gender);
   }
 

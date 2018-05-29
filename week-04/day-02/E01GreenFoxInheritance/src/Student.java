@@ -3,9 +3,15 @@ public class Student extends Person {
  String previousOrganization;
  int skippedDays;
 
- public void getGoal() {
+  @Override
+  public void introduce() {
     System.out.println("Hi, I am " + name + ", " + age + " year old " + gender + " from " +
             previousOrganization + " who skipped " + skippedDays + " days from the course already.");
+  }
+
+  @Override
+  public void getGoal() {
+    System.out.println("Be a junior developer!");
   }
 
   public void skipDays(int days) {
@@ -13,17 +19,13 @@ public class Student extends Person {
   }
 
   public Student(String name, int age, String gender, String previousOrganization) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
+    super(name, age, gender);
     this.previousOrganization = previousOrganization;
     this.skippedDays = 0;
   }
 
   public Student() {
-    this.name = "Jane Doe";
-    this.age = 30;
-    this.gender = "female";
+    super();
     this.previousOrganization = "The School of Life";
     this.skippedDays = 0;
   }
