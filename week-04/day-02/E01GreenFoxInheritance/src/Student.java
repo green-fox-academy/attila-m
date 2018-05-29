@@ -5,8 +5,8 @@ public class Student extends Person {
 
   @Override
   public void introduce() {
-    System.out.println("Hi, I am " + name + ", " + age + " year old " + gender + " from " +
-            previousOrganization + " who skipped " + skippedDays + " days from the course already.");
+    System.out.println("Hi, I am " + name + ", " + age + " year old " + gender + " from "
+            + previousOrganization + " who skipped " + skippedDays + " days from the course already.");
   }
 
   @Override
