@@ -17,4 +17,11 @@ public class Garden {
       gardenPlants.get(i).needsWater();
     }
   }
+
+  public void gardenWater(int waterAmount) {
+    for (int i = 0; i < gardenPlants.size() ; i++) {
+      gardenPlants.get(i).plantWatered(waterAmount);
+
+    }
+  }
 }

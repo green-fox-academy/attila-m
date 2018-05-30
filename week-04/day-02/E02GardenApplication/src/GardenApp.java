@@ -14,6 +14,9 @@ public class GardenApp {
     secretGarden.addPlant(orangeTree);
 
     secretGarden.gardenStatus();
-
+    secretGarden.gardenWater(40);
+    secretGarden.gardenStatus();
+    secretGarden.gardenWater(70);
+    secretGarden.gardenStatus();
     }
   }
