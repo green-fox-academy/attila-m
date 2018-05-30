@@ -3,11 +3,13 @@ public class Plant {
   int waterLevel;
   int minWaterLevel;
   double waterPercentage;
+  boolean plantNeedsWater;
 
-  public Plant(String name, int waterLevel, int minWaterLevel, double waterPercentage) {
+  public Plant(String name, int waterLevel, int minWaterLevel, double waterPercentage, boolean plantNeedsWater) {
     this.name = name;
     this.waterLevel = waterLevel;
     this.minWaterLevel = minWaterLevel;
+    this.plantNeedsWater = plantNeedsWater;
   }
 
   public void needsWater() {
@@ -21,5 +23,12 @@ public class Plant {
   public void plantWatered(int waterAmount) {
     double successfulWater;
     successfulWater = waterAmount / 100 * waterPercentage;
+  }
+
+  public boolean ifNeedsWater() {
+    if (waterLevel < minWaterLevel) {
+      plantNeedsWater
+      return true;
+    }
   }
 }
