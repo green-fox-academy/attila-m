@@ -63,4 +63,21 @@ class SumFunctionTest extends SumFunction {
 
   }
 
+  /*
+  @Test
+  public void should_returnNothing_whenNullInput() {
+
+    // Assignment
+    int expectedResult1 = 0;
+
+    // Act
+    int result1 = sumFunction.getSum();
+
+    // Assessment
+    assertEquals(expectedResult1, result1);
+
+
+  }
+  */
+
 }
