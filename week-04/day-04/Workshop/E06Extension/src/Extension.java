@@ -1,9 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by aze on 2017.04.04..
- */
 public class Extension {
   int add(int a, int b) {
     return 5;

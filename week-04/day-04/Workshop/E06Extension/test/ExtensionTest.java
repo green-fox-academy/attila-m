@@ -4,15 +4,13 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * Created by aze on 2017.04.04..
- */
 class ExtensionTest {
 
   Extension extension = new Extension();
 
   @Test
   void testAdd_2and3is5() {
+
     assertEquals(5, extension.add(2, 3));
   }
 

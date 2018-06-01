@@ -1,5 +1,5 @@
 public abstract class Instrument {
 
-  protected String name;
+  public String name;
   abstract void play ();
 }
