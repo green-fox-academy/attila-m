@@ -12,3 +12,5 @@ public class ElectricGuitar extends StringedInstruments {
     setNumberOfStrings(numberOfStrings);
   }
 }
+
+

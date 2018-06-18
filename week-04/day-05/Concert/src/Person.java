@@ -1,11 +1,16 @@
 public abstract class Person {
 
-  private String name;
-  private int age;
+  public String name;
+  public int age;
+
+  public Person() {
+    this.name = "John";
+    this.age = 26;
+  }
 
   public Person(String name, int age) {
-    this.name = "John";
-    this.age = 25;
+    this.name = name;
+    this.age = age;
   }
 
   public String getName() {
