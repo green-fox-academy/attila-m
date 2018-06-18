@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class E02 {
   public static void main(String[] args) {
@@ -10,7 +9,7 @@ public class E02 {
 
   private static double getOddAvg(ArrayList<Integer> numbers) {
     return numbers.stream()
-            .filter(number -> number % 2 == 1)
+            .filter(n -> n % 2 == 1)
             .mapToInt(n -> n)
             .average()
             .getAsDouble();
