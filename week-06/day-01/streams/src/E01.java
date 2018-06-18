@@ -10,7 +10,7 @@ public class E01 {
     System.out.println(getEvens(numbers));
   }
 
-  public static List<Integer> getEvens(List<Integer> numbers) {
+  private static List<Integer> getEvens(List<Integer> numbers) {
     return numbers.stream()
             .filter(n -> n % 2 == 0)
             .collect(Collectors.toList());
