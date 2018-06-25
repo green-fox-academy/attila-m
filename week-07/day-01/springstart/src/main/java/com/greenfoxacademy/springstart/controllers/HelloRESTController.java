@@ -12,7 +12,7 @@ public class HelloRESTController {
   AtomicLong counter = new AtomicLong();
 
   @RequestMapping
-  public Greeting greeting(@RequestParam(value = "content", defaultValue = "World!") String content) {
+  public Greeting greeting(@RequestParam(value = "content", defaultValue = "World") String content) {
     return new Greeting(counter.incrementAndGet(),"Hello " + content + "!");
   }
 }
