@@ -1,0 +1,3 @@
+.currency:after {
+    content: ".00 Zebra";
+}

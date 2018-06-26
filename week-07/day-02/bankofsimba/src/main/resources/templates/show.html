@@ -2,6 +2,7 @@
     <html lang="en" xmlns:th="http://www.thymeleaf.org">
         <head>
             <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="style.css"/>
             <title>Bank Accounts</title>
         </head>
         <body>
@@ -21,7 +22,7 @@
                     <tbody>
                         <tr>
                             <td><p th:text="*{name}"></p></td>
-                            <td><p th:text="*{balance}"></p></td>
+                            <td><p th:text="*{balance}" class="currency"></p></td>
                             <td><p th:text="*{animalType}"></p></td>
                         </tr>
                     </tbody>

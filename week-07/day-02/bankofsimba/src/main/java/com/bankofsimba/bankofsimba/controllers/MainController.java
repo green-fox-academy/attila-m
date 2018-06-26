@@ -19,4 +19,10 @@ public class MainController {
     model.addAttribute("bankAccount", bankAccount);
     return "show";
   }
+
+  @GetMapping("/enjoy")
+  public String showEnjoyPage(Model model) {
+    model.addAttribute("enjoy", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
+    return "enjoy";
+  }
 }
