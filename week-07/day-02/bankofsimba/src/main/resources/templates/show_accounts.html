@@ -12,18 +12,34 @@
                     <col width="130"/>
                     <col width="130"/>
                     <col width="130"/>
+                    <col width="130"/>
+                    <col width="130"/>
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Balance</th>
                             <th>Animal Type</th>
+                            <th>King</th>
+                            <th>Good or Bad</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr th:each="account : *{accountList}">
-                            <td><p th:text="${account.name}"></p></td>
-                            <td><p th:text="${account.balance}" class="currency"></p></td>
-                            <td><p th:text="${account.animalType}"></p></td>
+                            <td th:text="${account.name}"></td>
+                            <td th:text="${account.balance}" class="currency"></td>
+                            <td th:text="${account.animalType}"></td>
+                            <td th:if="${account.isKing()}">
+                                <p class="king">A king</p>
+                            </td>
+                            <td th:unless="${account.isKing()}">
+                                <p>Not a king</p>
+                            </td>
+                            <td th:if="${account.isGood()}">
+                                <p>Good guy</p>
+                            </td>
+                            <td th:unless="${account.isGood()}">
+                                <p>Bad guy</p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

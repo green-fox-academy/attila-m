@@ -24,7 +24,7 @@ public class AccountList {
     accountList.add(new BankAccount("Simba", 20000, "lion", true, true));
     accountList.add(new BankAccount("Timon Berkowitz", 1000, "meerkat", false, true));
     accountList.add(new BankAccount("Pumbaa", 1, "warthog", false, true));
-    accountList.add(new BankAccount("Scar", 40000, "lion",false, true ));
+    accountList.add(new BankAccount("Scar", 40000, "lion",true, false ));
     accountList.add(new BankAccount("Rafiki", 5000, "mandrill", false,true));
   }
 }

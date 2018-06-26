@@ -29,10 +29,14 @@ th, td {
 }
 
 tbody {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .currency:after {
     content: ".00 Zebra";
+}
+
+.king {
+    color: gold;
 }
 

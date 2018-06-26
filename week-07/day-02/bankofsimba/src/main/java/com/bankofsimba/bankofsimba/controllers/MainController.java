@@ -16,7 +16,7 @@ public class MainController {
 
   @GetMapping("/show")
   public String showBankAccounts(Model model) {
-    BankAccount bankAccount = new BankAccount("Simba", 2000, "Lion");
+    BankAccount bankAccount = new BankAccount("Simba", 2000, "Lion", true, true);
     model.addAttribute("bankAccount", bankAccount);
     return "show";
   }
@@ -32,5 +32,6 @@ public class MainController {
     model.addAttribute("allAccounts", new AccountList());
     return "show_accounts";
   }
+
 
 }
