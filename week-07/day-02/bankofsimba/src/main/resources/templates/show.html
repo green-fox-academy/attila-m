@@ -7,9 +7,25 @@
         <body>
             <h1>Bank Accounts</h1>
             <div th:object="${bankAccount}">
-                <p th:text="'Name: ' + *{name}"></p>
-                <p th:text="'Balance: ' + *{balance}"></p>
-                <p th:text="'Animal Type: ' + *{animalType}"></p>
+                <table>
+                    <col width="130"/>
+                    <col width="130"/>
+                    <col width="130"/>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Balance</th>
+                            <th>Animal Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><p th:text="*{name}"></p></td>
+                            <td><p th:text="*{balance}"></p></td>
+                            <td><p th:text="*{animalType}"></p></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </body>
     </html>
