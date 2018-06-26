@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+        <head>
+            <meta charset="UTF-8"/>
+            <link rel="stylesheet" href="style.css"/>
+            <title>Bank Accounts</title>
+        </head>
+        <body>
+            <h1>Bank Accounts</h1>
+            <div th:object="${allAccounts}">
+                <table>
+                    <col width="130"/>
+                    <col width="130"/>
+                    <col width="130"/>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Balance</th>
+                            <th>Animal Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="account : *{accountList}">
+                            <td><p th:text="${account.name}"></p></td>
+                            <td><p th:text="${account.balance}" class="currency"></p></td>
+                            <td><p th:text="${account.animalType}"></p></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </body>
+    </html>

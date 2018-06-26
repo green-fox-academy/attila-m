@@ -1,5 +1,6 @@
 package com.bankofsimba.bankofsimba.controllers;
 
+import com.bankofsimba.bankofsimba.models.AccountList;
 import com.bankofsimba.bankofsimba.models.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,4 +26,11 @@ public class MainController {
     model.addAttribute("enjoy", "This is an <em>HTML</em> text. <b>Enjoy yourself!</b>");
     return "enjoy";
   }
+
+  @GetMapping("/show_accounts")
+  public String showAllAccounts(Model model) {
+    model.addAttribute("allAccounts", new AccountList());
+    return "show_accounts";
+  }
+
 }
