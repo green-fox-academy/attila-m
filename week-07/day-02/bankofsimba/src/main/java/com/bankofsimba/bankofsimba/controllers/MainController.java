@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class MainController {
 
+  AccountList accountList = new AccountList();
+
   @GetMapping("")
   public String showIndexPage() {
     return "index";
@@ -31,25 +33,14 @@ public class MainController {
 
   @GetMapping("/show_accounts")
   public String showAllAccounts(Model model) {
-    model.addAttribute("allAccounts", new AccountList());
-    return "show_accounts";
-  }
-
-  @GetMapping("/show_accounts")
-  public String showRegistrationPage(Model model) {
+    model.addAttribute("allAccounts", accountList);
     model.addAttribute("newAccount", new BankAccount());
     return "show_accounts";
   }
 
   @PostMapping("/show_accounts")
   public String submitNewAccount(@ModelAttribute BankAccount bankAccount) {
-
-    return "redirect:/show_accounts";
-  }
-
-  @PostMapping("/show_accounts")
-  public String submitZebras() {
-
+    accountList.accountList.add(bankAccount);
     return "redirect:/show_accounts";
   }
 }

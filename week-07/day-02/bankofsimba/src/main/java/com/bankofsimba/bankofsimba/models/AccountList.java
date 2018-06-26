@@ -6,22 +6,20 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class AccountList {
 
-  private List<BankAccount> accountList;
+  public List<BankAccount> accountList;
 
   public AccountList() {
     accountList = new ArrayList<>();
     generateAccounts();
   }
 
-  AtomicLong id = new AtomicLong();
-
-  public List<BankAccount> getAccountList() {
-    return accountList;
-  }
-
-  public void setAccountList(List<BankAccount> accountList) {
-    this.accountList = accountList;
-  }
+//  public List<BankAccount> getAccountList() {
+//    return accountList;
+//  }
+//
+//  public void setAccountList(List<BankAccount> accountList) {
+//    this.accountList = accountList;
+//  }
 
   public void generateAccounts() {
     accountList.add(new BankAccount("Simba", 20000, "lion", true, true));

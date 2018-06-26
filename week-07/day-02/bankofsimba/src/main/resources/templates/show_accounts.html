@@ -7,13 +7,13 @@
         </head>
         <body>
             <h1>Bank Accounts</h1>
-            <div class="loginForm">
-                <form action="#" th:action="@{show_accounts}" method="post" th:object="${BankAccount}">
-                    <label for="account_name">Name: </label>
-                    <input  type="text" id="account_name" th:/><br>
-                    <input type="submit" value="Submit Zebras"/>
-                </form>
-            </div>
+            <!--<div class="loginForm">-->
+                <!--<form action="#" th:action="@{show_accounts}" method="post" th:object="${BankAccount}">-->
+                    <!--<label for="account_name">Name: </label>-->
+                    <!--<input  type="text" id="account_name" th:/><br>-->
+                    <!--<input type="submit" value="Submit Zebras"/>-->
+                <!--</form>-->
+            <!--</div>-->
             <br/>
             <div th:object="${allAccounts}">
                 <table>
@@ -31,43 +31,29 @@
                             <td th:text="${account.name}"></td>
                             <td th:text="${account.balance}" class="currency"></td>
                             <td th:text="${account.animalType}"></td>
-                            <td th:if="${account.isKing()}">
+                            <td th:if="${account.king}">
                                 <p class="king">A king</p>
                             </td>
-                            <td th:unless="${account.isKing()}">
+                            <td th:unless="${account.king}">
                                 <p>Not a king</p>
                             </td>
-                            <td th:if="${account.isGood()}">
+                            <td th:if="${account.goodguy}">
                                 <p>Good guy</p>
                             </td>
-                            <td th:unless="${account.isGood()}">
+                            <td th:unless="${account.goodguy}">
                                 <p>Bad guy</p>
                             </td>
-                        </tr>
-                        <tr>
-                            <form action="#" th:action="@{show_accounts}" method="post" th:object="${newAccount}">
-                                <td>
-                                    <input type="text" th:field="*{name}" value="Name" />
-                                </td>
-                                <td>
-                                    <input type="text" th:field="*{balance}" value="Balance"/>
-                                </td>
-                                <td>
-                                    <input type="text" th:field="*{animalType}" value="Animal Type" />
-                                </td>
-                                <td>
-                                    <input type="text" th:field="*{isKing}" value="True or False" />
-                                </td>
-                                <td>
-                                    <input type="text" th:field="*{isGood}" value="True or False"/>
-                                </td>
-                                <td>
-                                    <input type="submit" value="Submit Account" />
-                                </td>
-                            </form>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <form action="#" th:action="@{/show_accounts}" method="post" th:object="${newAccount}">
+                <input type="text" th:field="*{name}"/>
+                <input type="text" th:field="*{balance}"/>
+                <input type="text" th:field="*{animalType}"/>
+                <input type="text" th:field="*{king}"/>
+                <input type="text" th:field="*{goodguy}"/>
+                <input type="submit" value="Submit Account" />
+            </form>
         </body>
     </html>
