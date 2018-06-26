@@ -7,13 +7,16 @@
         </head>
         <body>
             <h1>Bank Accounts</h1>
+            <div class="loginForm">
+                <form action="#" th:action="@{show_accounts}" method="post" th:object="${BankAccount}">
+                    <label for="account_name">Name: </label>
+                    <input  type="text" id="account_name" th:/><br>
+                    <input type="submit" value="Submit Zebras"/>
+                </form>
+            </div>
+            <br/>
             <div th:object="${allAccounts}">
                 <table>
-                    <col width="130"/>
-                    <col width="130"/>
-                    <col width="130"/>
-                    <col width="130"/>
-                    <col width="130"/>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -40,6 +43,28 @@
                             <td th:unless="${account.isGood()}">
                                 <p>Bad guy</p>
                             </td>
+                        </tr>
+                        <tr>
+                            <form action="#" th:action="@{show_accounts}" method="post" th:object="${newAccount}">
+                                <td>
+                                    <input type="text" th:field="*{name}" value="Name" />
+                                </td>
+                                <td>
+                                    <input type="text" th:field="*{balance}" value="Balance"/>
+                                </td>
+                                <td>
+                                    <input type="text" th:field="*{animalType}" value="Animal Type" />
+                                </td>
+                                <td>
+                                    <input type="text" th:field="*{isKing}" value="True or False" />
+                                </td>
+                                <td>
+                                    <input type="text" th:field="*{isGood}" value="True or False"/>
+                                </td>
+                                <td>
+                                    <input type="submit" value="Submit Account" />
+                                </td>
+                            </form>
                         </tr>
                     </tbody>
                 </table>

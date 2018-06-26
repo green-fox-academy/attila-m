@@ -5,6 +5,8 @@ import com.bankofsimba.bankofsimba.models.BankAccount;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class MainController {
@@ -33,5 +35,21 @@ public class MainController {
     return "show_accounts";
   }
 
+  @GetMapping("/show_accounts")
+  public String showRegistrationPage(Model model) {
+    model.addAttribute("newAccount", new BankAccount());
+    return "show_accounts";
+  }
 
+  @PostMapping("/show_accounts")
+  public String submitNewAccount(@ModelAttribute BankAccount bankAccount) {
+
+    return "redirect:/show_accounts";
+  }
+
+  @PostMapping("/show_accounts")
+  public String submitZebras() {
+
+    return "redirect:/show_accounts";
+  }
 }

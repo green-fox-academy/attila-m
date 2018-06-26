@@ -2,6 +2,7 @@ package com.bankofsimba.bankofsimba.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class AccountList {
 
@@ -11,6 +12,8 @@ public class AccountList {
     accountList = new ArrayList<>();
     generateAccounts();
   }
+
+  AtomicLong id = new AtomicLong();
 
   public List<BankAccount> getAccountList() {
     return accountList;

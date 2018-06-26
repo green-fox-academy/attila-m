@@ -11,8 +11,6 @@ table {
     border: 4px solid black;
     align-self: auto;
     margin: auto;
-    height: 320px;
-    max-width: 600px;
     background: burlywood;
 }
 
@@ -22,14 +20,26 @@ thead {
 }
 
 th, td {
-    padding: 25px;
+    padding: 10px;
     text-align: left;
-    width: 300px;
+    width: 500px;
     border: 1px solid grey;
 }
 
 tbody {
     font-size: 15px;
+}
+
+.loginForm {
+    margin: auto;
+    padding: 25px;
+    text-align: center;
+    font-size: 25px;
+    border: 4px solid black;
+    align-self: auto;
+    max-width: 200px;
+    max-height: 100px;
+    background: burlywood;
 }
 
 .currency:after {
