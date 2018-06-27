@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="styles.css">
     <title>Colored Background</title>
 </head>
-<body>
+<body th:bgcolor="${color}">
 <h1>This Background is <em>VERY</em> colored.</h1>
 </body>
 </html>
