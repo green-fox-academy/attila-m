@@ -30,4 +30,11 @@ public class MainController {
     model.addAttribute("isValid", utilityService.validateEmail(email));
     return "email";
   }
+
+  @GetMapping("/useful/caesar")
+  public String showCaesarCoding(@RequestParam(value = "text")String text, @RequestParam(value = "number")int number, Model model) {
+    model.addAttribute("text", utilityService.caesar(text, number));
+    return "caesar";
+  }
+
 }

@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<div th:if="${isValid}"><p style="color: green" th:text="${email} + 'is a valid email address'"></p></div>
-<div th:unless="${isValid}"><p style="color: red" th:text="${email} + 'is not a valid email address'"></p></div>
+<div th:if="${isValid}"><p style="color: green" th:text="${email} + ' is a valid email address'"></p></div>
+<div th:unless="${isValid}"><p style="color: red" th:text="${email} + ' is not a valid email address'"></p></div>
 </body>
 </html>
