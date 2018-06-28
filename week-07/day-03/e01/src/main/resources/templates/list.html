@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List of Students</title>
+</head>
+<body>
+<h1>You can see the damned here: </h1>
+<ul th:each="student : ${students.findAll()}">
+    <li th:text="${student}"></li>
+</ul>
+</body>
+</html>
