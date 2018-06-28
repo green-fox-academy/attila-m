@@ -8,5 +8,6 @@ public class FoxclubApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(FoxclubApplication.class, args);
+    System.out.println("FoxClub App running...");
   }
 }
