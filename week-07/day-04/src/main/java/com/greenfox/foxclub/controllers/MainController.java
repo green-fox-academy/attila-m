@@ -20,7 +20,6 @@ public class MainController {
 
   @GetMapping("/login")
   public String showLoginPage() {
-
     return "login";
   }
 
@@ -29,7 +28,8 @@ public class MainController {
     if (name == null) {
       return "redirect:/login";
     }
-    model.addAttribute("name", name);
+    foxService.login(name);
+    model.addAttribute("name", foxService.getFox(name).getName());
     return "index";
   }
 }
