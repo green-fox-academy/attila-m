@@ -6,4 +6,5 @@ public interface FoxService {
 
   void login(String foxname);
   Fox getFox(String foxname);
+
 }

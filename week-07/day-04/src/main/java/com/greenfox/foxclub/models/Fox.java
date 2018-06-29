@@ -5,7 +5,7 @@ import java.util.List;
 public class Fox {
 
   private String name;
-  private List<String> tricks;
+  private List<Trick> tricks;
   private String food;
   private String drink;
 
@@ -16,7 +16,7 @@ public class Fox {
     this.name = name;
   }
 
-  public Fox(String name, List<String> tricks, String food, String drink) {
+  public Fox(String name, List<Trick> tricks, String food, String drink) {
     this.name = name;
     this.tricks = tricks;
     this.food = food;
@@ -31,11 +31,11 @@ public class Fox {
     this.name = name;
   }
 
-  public List<String> getTricks() {
+  public List<Trick> getTricks() {
     return tricks;
   }
 
-  public void setTricks(List<String> tricks) {
+  public void setTricks(List<Trick> tricks) {
     this.tricks = tricks;
   }
 
