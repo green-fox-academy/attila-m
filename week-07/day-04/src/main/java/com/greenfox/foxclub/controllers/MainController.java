@@ -7,8 +7,7 @@ import com.greenfox.foxclub.services.TrickService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MainController {
@@ -44,4 +43,9 @@ public class MainController {
     return "trickCenter";
   }
 
+  @PostMapping("/trick_center")
+  public String addTrickToFox(@ModelAttribute(value = "trick")Trick trick, @PathVariable(value = "fox") String foxName) {
+    foxService.getFox(foxName).getTricks().add(trick);
+    return "redirect:/trick_center";
+  }
 }

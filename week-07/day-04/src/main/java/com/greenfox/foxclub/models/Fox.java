@@ -8,8 +8,8 @@ public class Fox {
 
   private String name;
   private List<Trick> tricks;
-  private String food;
-  private String drink;
+  private List<Food> foodList;
+  private List<drink> drinkList;
 
   public Fox() {
   }

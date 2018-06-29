@@ -12,10 +12,14 @@
             <li><a href="/action_history">Action History</a></li>
         </ul>
         <div>
-            <select>
-                <option th:each="trick : ${tricks}" th:text="${trick.getTrickName()}"></option>
-            </select>
-
+            <form action="#" th:action="" method="post" >
+                <!--itt fog kapni egy rokat amit tovabbad submitnak-->
+                <select>
+                    <option th:each="trick : ${tricks}" th:text="${trick.getTrickName()}"></option>
+                </select>
+                <!--itt meg kell irni a field (v name)-et...vagy optionben?-->
+                <input type="submit" value="Learn Trick"/>
+            </form>
         </div>
     </body>
 </html>
