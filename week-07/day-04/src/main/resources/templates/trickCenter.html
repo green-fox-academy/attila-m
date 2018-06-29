@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Trick Center</title>
+    </head>
+    <body>
+        <ul>
+            <li><a href="">Information</a></li>
+            <li><a href="/nutrition_store">Nutrition Store</a></li>
+            <li><a href="/trick_center">Trick Center</a></li>
+            <li><a href="/action_history">Action History</a></li>
+        </ul>
+        <div>
+            <select>
+                <option th:each="trick : ${tricks}" th:text="${trick.getTrickName()}"></option>
+            </select>
+
+        </div>
+    </body>
+</html>

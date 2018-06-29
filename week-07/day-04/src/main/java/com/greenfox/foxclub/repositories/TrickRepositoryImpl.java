@@ -18,4 +18,13 @@ public class TrickRepositoryImpl implements TrickRepository {
   public void addTrick(Trick trick) {
     trickList.add(trick);
   }
+
+  public List<Trick> getTrickList() {
+    return trickList;
+  }
+
+  public void setTrickList(List<Trick> trickList) {
+    this.trickList = trickList;
+  }
 }
+

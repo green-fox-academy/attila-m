@@ -6,5 +6,6 @@ public interface FoxService {
 
   void login(String foxname);
   Fox getFox(String foxname);
+  int getTrickValueSum(String foxname);
 
 }
