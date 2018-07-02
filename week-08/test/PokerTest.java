@@ -13,10 +13,11 @@ public class PokerTest {
 
   @Test
   public void shouldReturnWinningHand() {
-    String[] white = new String[] {"2H", "3D", "5S", "9C", "KD"};
-    String[] black = new String[] {"2C", "3H", "4S", "8C", "AH"};
-
+    String[] black = new String[] {"2H", "3D", "5S", "9C", "KD"};
+    String[] white = new String[] {"2C", "3H", "4S", "8C", "AH"};
     assertEquals("White wins!", Poker.getWinningHand(white, black));
-
   }
+
+  
+
 }
