@@ -40,7 +40,7 @@ public class PokerTest {
   public void shouldReturnHigherPair() {
     String[] black = new String[] {"2H", "3D", "5S", "9C", "KD"};
     String[] white = new String[] {"2C", "2H", "4S", "KC", "AH"};
-    assertEquals("White wins!", Poker.getWinningPair(white, black));
+    assertEquals("Black wins!", Poker.getWinningPair(white, black));
   }
 
   @Test
