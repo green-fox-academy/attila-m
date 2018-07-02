@@ -18,6 +18,10 @@ public class PokerTest {
     assertEquals("White wins!", Poker.getWinningHand(white, black));
   }
 
-  
-
+  @Test
+  public void shouldReturnWinningHandWithPair() {
+    String[] black = new String[] {"2H", "2D", "5S", "9C", "KD"};
+    String[] white = new String[] {"2C", "3H", "4S", "KC", "AH"};
+    assertEquals("Black wins!", Poker.getWinningPair(white, black));
+  }
 }
