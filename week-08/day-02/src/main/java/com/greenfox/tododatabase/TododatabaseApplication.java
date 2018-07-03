@@ -19,6 +19,9 @@ public class TododatabaseApplication implements CommandLineRunner {
 
   @Override
   public void run(String... args) throws Exception {
-    todoRepository.save(new Todo("todo1"));
+    todoRepository.save(new Todo("I have to learn Object Relational Mapping"));
+    todoRepository.save(new Todo("I have to learn about MySQL"));
+    todoRepository.save(new Todo("I have to learn Python"));
+    todoRepository.save(new Todo("I have to drink 9999 beers"));
   }
 }
