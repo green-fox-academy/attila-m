@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Find out what's wrong</title>
+    </head>
+    <body>
+        <h1>User Database</h1>
+        <h2>Add a new User</h2>
+        <form action="#" th:action="@{/app}" th:object="${userObject}" method="post">
+            <p>First Name: <input type="text" th:field="*{firstName}" /></p>
+            <p>Last Name: <input type="text" th:field="*{lastName}" /></p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <h2>Existing users</h2>
+        <table>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+            <tr th:each="user : ${showAll}">
+                <td th:text="${user.getFirstName()}">Lacika</td>
+                <td th:text="${user.getLastName()}">Kovács</td>
+            </tr>
+        </table>
+    </body>
+</html>
