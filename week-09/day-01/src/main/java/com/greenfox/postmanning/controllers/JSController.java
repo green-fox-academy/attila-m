@@ -3,10 +3,9 @@ package com.greenfox.postmanning.controllers;
 import com.greenfox.postmanning.models.*;
 import com.greenfox.postmanning.models.Error;
 import com.greenfox.postmanning.models.Number;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Required;
+import org.springframework.web.bind.annotation.*;
+
 
 @RestController
 public class JSController {
@@ -33,7 +32,30 @@ public class JSController {
   }
 
   @GetMapping("/appenda/{appendable}")
-  public Appended getAppended(@PathVariable String appendable) {
-    
+  public Appended getAppended(@PathVariable("appendable") String word) {
+    return new Appended(word);
+  }
+
+  @PostMapping("/dountil/{what}")
+  public Returnable getResult(@RequestBody DoUntil until,
+                              @PathVariable("what") String what) {
+    if (until != ) {
+      return new Error("Please provide a number!");
+    } else if (until.getUntil() != null) {
+      Integer number = 1;
+      Integer temp = 1;
+      if (what.equals("sum")) {
+        for (Integer i = 1; i < until.getUntil(); i++) {
+          temp++;
+          number += temp;
+        }
+        return new Result(number);
+      } else if (what.equals("factor")) {
+        for (Integer i = 1; i <= until.getUntil(); i++) {
+          number *= i;
+        }
+        return new Result(number);
+      }
+    } return new Error("Please select an operation!");
   }
 }
