@@ -10,3 +10,4 @@ public class PostmanningApplication {
     SpringApplication.run(PostmanningApplication.class, args);
   }
 }
+
