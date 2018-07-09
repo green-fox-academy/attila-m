@@ -1,4 +1,4 @@
 package com.greenfox.foxclub.repositories;
 
-public class FoodRepositoryImpl {
+public class FoodRepositoryImpl implements FoodRepository{
 }

@@ -9,23 +9,23 @@ public class Fox {
   private String name;
   private List<Trick> tricks;
   private List<Food> foodList;
-  private List<drink> drinkList;
+  private List<Drink> drinkList;
 
   public Fox() {
   }
 
   public Fox(String name) {
     this.name = name;
-    this.drink = "water";
-    this.food = "bread";
+    this.drinkList = new ArrayList<>(Arrays.asList(new Drink("water")));
+    this.foodList = new ArrayList<>(Arrays.asList(new Food("bread")));
     this.tricks = new ArrayList<>(Arrays.asList(new Trick("breathing", 0)));
   }
 
-  public Fox(String name, List<Trick> tricks, String food, String drink) {
+  public Fox(String name, List<Trick> tricks, List<Food> foodList, List<Drink> drinkList) {
     this.name = name;
     this.tricks = tricks;
-    this.food = food;
-    this.drink = drink;
+    this.foodList = foodList;
+    this.drinkList = drinkList;
   }
 
   public String getName() {
@@ -44,19 +44,19 @@ public class Fox {
     this.tricks = tricks;
   }
 
-  public String getFood() {
-    return food;
+  public List<Food> getFoodList() {
+    return foodList;
   }
 
-  public void setFood(String food) {
-    this.food = food;
+  public void setFoodList(List<Food> foodList) {
+    this.foodList = foodList;
   }
 
-  public String getDrink() {
-    return drink;
+  public List<Drink> getDrinkList() {
+    return drinkList;
   }
 
-  public void setDrink(String drink) {
-    this.drink = drink;
+  public void setDrinkList(List<Drink> drinkList) {
+    this.drinkList = drinkList;
   }
 }
