@@ -23,4 +23,9 @@ public class AttractionServiceImpl implements AttractionService {
   public void addAttraction(Attractions attraction) {
     attractionRepository.save(attraction);
   }
+
+  @Override
+  public Attractions getAttraction(int id) {
+    return attractionRepository.findById(id).get();
+  }
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -30,5 +31,11 @@ public class MainController {
   public String addAttraction(@ModelAttribute(value = "newAttraction") Attractions attraction) {
     attractionService.addAttraction(attraction);
     return "redirect:/";
+  }
+
+  @GetMapping("/edit/{id}")
+  public String editAttraction(@PathVariable(value = "id") int id, Model model) {
+    model.addAttribute("editAttribute", attractionService.getAttraction(id));
+    return "index";
   }
 }

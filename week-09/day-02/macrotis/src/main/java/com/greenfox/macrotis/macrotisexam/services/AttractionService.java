@@ -9,4 +9,5 @@ import java.util.List;
 public interface AttractionService {
   List<Attractions> getAllAttractions();
   void addAttraction(Attractions attraction);
+  Attractions getAttraction(int id);
 }
