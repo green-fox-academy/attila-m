@@ -19,7 +19,7 @@ public class MainController {
     this.attractionService = attractionService;
   }
 
-  @GetMapping("")
+  @GetMapping("/")
   public String showIndex(Model model) {
     model.addAttribute("newAttraction", new Attractions());
     model.addAttribute("attractionlist", attractionService.getAllAttractions());
@@ -27,7 +27,7 @@ public class MainController {
   }
 
   @PostMapping("/add")
-  public String addAttraction(@ModelAttribute Attractions attraction) {
+  public String addAttraction(@ModelAttribute(value = "newAttraction") Attractions attraction) {
     attractionService.addAttraction(attraction);
     return "redirect:/";
   }

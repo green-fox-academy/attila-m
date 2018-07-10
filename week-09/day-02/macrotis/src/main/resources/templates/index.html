@@ -27,7 +27,7 @@
         <td th:text="*{recommendedAge}"></td>
     </tr>
 </table><br>
-<form action="/add" th:object="${newAttraction}">
+<form action="/add" th:object="${newAttraction}" method="post">
     <label for="name">Name: </label>
     <input type="text" id="name" th:field="*{attrName}"><br>
     <label for="city">City: </label>
@@ -44,7 +44,7 @@
     <input type="text" id="duration" th:field="*{duration}"><br>
     <label for="age">Recommended Age: </label>
     <input type="text" id="age" th:field="*{recommendedAge}"><br>
-    <input type="button" value="elkuldes">
+    <input type="submit" value="elkuldes">
 </form>
 </body>
 </html>
