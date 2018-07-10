@@ -3,7 +3,6 @@ package com.greenfox.postmanning.controllers;
 import com.greenfox.postmanning.models.*;
 import com.greenfox.postmanning.models.Error;
 import com.greenfox.postmanning.models.Number;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -37,11 +36,9 @@ public class JSController {
   }
 
   @PostMapping("/dountil/{what}")
-  public Returnable getResult(@RequestBody DoUntil until,
+  public Returnable getResult(@RequestBody(required = false) DoUntil until,
                               @PathVariable("what") String what) {
-    if (until != ) {
-      return new Error("Please provide a number!");
-    } else if (until.getUntil() != null) {
+    if (until != null) {
       Integer number = 1;
       Integer temp = 1;
       if (what.equals("sum")) {
@@ -56,6 +53,20 @@ public class JSController {
         }
         return new Result(number);
       }
-    } return new Error("Please select an operation!");
+    }
+    return new Error("Please provide a number!");
+  }
+  @PostMapping("/arrays")
+  public Returnable calculateArray(@RequestBody ArraysOperation arrays) {
+    Integer sum = 0;
+    if (arrays.getWhat().equals("sum")) {
+      for (int i = 0; i < arrays.getNumbers().length; i++) {
+        sum+=arrays.getNumbers()[i];
+      }
+    } else if (arrays.getWhat().equals("multiply")) {
+      for (int i = 0; i < arrays.getNumbers().length - 1 ; i++) {
+        sum+=arrays.getNumbers()[i] * arrays.getNumbers()[i + 1];
+      }
+    } return new Result(sum);
   }
 }
