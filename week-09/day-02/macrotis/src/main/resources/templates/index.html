@@ -24,8 +24,27 @@
         <td th:text="*{lattitude}"></td>
         <td th:text="*{category}"></td>
         <td th:text="*{duration}"></td>
-        <td th:text="*{reccomendedAge}"></td>
+        <td th:text="*{recommendedAge}"></td>
     </tr>
-</table>
+</table><br>
+<form action="/add" th:object="${newAttraction}">
+    <label for="name">Name: </label>
+    <input type="text" id="name" th:field="*{attrName}"><br>
+    <label for="city">City: </label>
+    <input type="text" id="city" th:field="*{city}"><br>
+    <label for="price">Price: </label>
+    <input type="text" id="price" th:field="*{price}"><br>
+    <label for="longitude">Longitude: </label>
+    <input type="text" id="longitude" th:field="*{longitude}"><br>
+    <label for="longitude">Lattitude: </label>
+    <input type="text" id="latitude" th:field="*{lattitude}"><br>
+    <label for="category">Category: </label>
+    <input type="text" id="category" th:field="*{category}"><br>
+    <label for="duration">Duration: </label>
+    <input type="text" id="duration" th:field="*{duration}"><br>
+    <label for="age">Recommended Age: </label>
+    <input type="text" id="age" th:field="*{recommendedAge}"><br>
+    <input type="button" value="elkuldes">
+</form>
 </body>
 </html>

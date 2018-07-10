@@ -18,12 +18,12 @@ public class Attractions {
   private float lattitude;
   private String category;
   private int duration;
-  private float reccomendedAge;
+  private float recommendedAge;
 
   public Attractions() {
   }
 
-  public Attractions(String attrName, String city, int price, float longitude, float lattitude, String category, int duration, float reccomendedAge) {
+  public Attractions(String attrName, String city, int price, float longitude, float lattitude, String category, int duration, float recommendedAge) {
     this.attrName = attrName;
     this.city = city;
     this.price = price;
@@ -31,7 +31,7 @@ public class Attractions {
     this.lattitude = lattitude;
     this.category = category;
     this.duration = duration;
-    this.reccomendedAge = reccomendedAge;
+    this.recommendedAge = recommendedAge;
   }
 
   public int getId() {
@@ -98,11 +98,11 @@ public class Attractions {
     this.duration = duration;
   }
 
-  public float getReccomendedAge() {
-    return reccomendedAge;
+  public float getRecommendedAge() {
+    return recommendedAge;
   }
 
-  public void setReccomendedAge(float reccomendedAge) {
-    this.reccomendedAge = reccomendedAge;
+  public void setRecommendedAge(float recommendedAge) {
+    this.recommendedAge = recommendedAge;
   }
 }

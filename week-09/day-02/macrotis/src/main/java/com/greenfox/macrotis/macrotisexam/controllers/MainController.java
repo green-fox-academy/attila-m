@@ -1,7 +1,7 @@
 package com.greenfox.macrotis.macrotisexam.controllers;
 
+import com.greenfox.macrotis.macrotisexam.models.Attractions;
 import com.greenfox.macrotis.macrotisexam.services.AttractionService;
-import com.greenfox.macrotis.macrotisexam.services.AttractionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +19,7 @@ public class MainController {
 
   @GetMapping("")
   public String showIndex(Model model) {
+    model.addAttribute("newAttraction", new Attractions());
     model.addAttribute("attractionlist", attractionService.getAllAttractions());
     return "index";
   }
