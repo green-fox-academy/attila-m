@@ -16,7 +16,15 @@
         <th>Duration</th>
         <th>Recommended age</th>
     </tr>
-    <tr th:each="attraction : ${attractions}">
+    <tr th:each="attraction : ${attractionlist}" th:object="${attraction}">
+        <td th:text="*{attrName}"></td>
+        <td th:text="*{city}"></td>
+        <td th:text="*{price}"></td>
+        <td th:text="*{longitude}"></td>
+        <td th:text="*{lattitude}"></td>
+        <td th:text="*{category}"></td>
+        <td th:text="*{duration}"></td>
+        <td th:text="*{reccomendedAge}"></td>
     </tr>
 </table>
 </body>
