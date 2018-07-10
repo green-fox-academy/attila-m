@@ -8,4 +8,5 @@ import java.util.List;
 @Service
 public interface AttractionService {
   List<Attractions> getAllAttractions();
+  void addAttraction(Attractions attraction);
 }

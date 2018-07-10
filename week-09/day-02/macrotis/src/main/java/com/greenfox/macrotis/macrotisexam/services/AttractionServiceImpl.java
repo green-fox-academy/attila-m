@@ -18,4 +18,9 @@ public class AttractionServiceImpl implements AttractionService {
   public List<Attractions> getAllAttractions() {
     return attractionRepository.findAll();
   }
+
+  @Override
+  public void addAttraction(Attractions attraction) {
+    attractionRepository.save(attraction);
+  }
 }
