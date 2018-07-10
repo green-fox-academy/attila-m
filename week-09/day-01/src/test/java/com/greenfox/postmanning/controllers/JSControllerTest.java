@@ -2,6 +2,7 @@ package com.greenfox.postmanning.controllers;
 
 import static org.junit.Assert.*;
 
+import com.greenfox.postmanning.models.Appended;
 import com.greenfox.postmanning.models.Greeting;
 import com.greenfox.postmanning.models.Person;
 import org.junit.Test;
@@ -48,5 +49,15 @@ public class JSControllerTest {
             .andDo(print())
             .andExpect(status().isOk())
             .andExpect(jsonPath("$.welcome_message", is(greeting.getWelcome_message())));
+  }
+
+  @Test
+  public void should_returnAppended_when_gettingWord() throws Exception {
+    Appended appended = new Appended("attil");
+    mockMvc.perform(get("/appenda/attil")
+            .contentType(MediaType.APPLICATION_JSON_UTF8))
+            .andDo(print())
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.appended", is(appended.getAppended())));
   }
 }
