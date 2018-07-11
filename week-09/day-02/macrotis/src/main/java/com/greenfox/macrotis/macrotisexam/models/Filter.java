@@ -9,7 +9,6 @@ public class Filter {
   private List<Attractions> attractions;
 
   public Filter() {
-    this.result = "ok";
   }
 
   public Filter(String result, int count, List<Attractions> attractions) {

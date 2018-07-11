@@ -17,8 +17,8 @@ public class RestController {
   }
 
   @GetMapping("/attractions")
-  public Filter filterAttractions(@RequestParam(value = "city") String city,
-                                  @RequestParam(value = "category") String category) {
+  public Filter filterAttractions(@RequestParam(value = "city", required = false) String city,
+                                  @RequestParam(value = "category", required = false) String category) {
     return attractionService.filterAttractions(city, category);
   }
 }

@@ -32,10 +32,19 @@ public class AttractionServiceImpl implements AttractionService {
 
   @Override
   public Filter filterAttractions(String city, String category) {
-    Filter filter = new Filter();
-
-
-
-    return null;
+    List<Attractions> attractionsList;
+    if(category != null && city != null) {
+      attractionsList = attractionRepository.findByCityAndCategory(city, category);
+      return new Filter("ok", attractionsList.size(), attractionsList);
+    } else if (category != null) {
+      attractionsList = attractionRepository.findByCategory(category);
+      return new Filter("ok", attractionsList.size(), attractionsList);
+    } else if (city != null) {
+      attractionsList = attractionRepository.findByCity(city);
+      return new Filter("ok", attractionsList.size(), attractionsList);
+    } else {
+      attractionsList = attractionRepository.findAll();
+      return new Filter("full list", attractionsList.size(), attractionsList);
+    }
   }
 }
