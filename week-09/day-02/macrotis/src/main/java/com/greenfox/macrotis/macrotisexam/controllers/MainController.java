@@ -1,14 +1,12 @@
 package com.greenfox.macrotis.macrotisexam.controllers;
 
 import com.greenfox.macrotis.macrotisexam.models.Attractions;
+import com.greenfox.macrotis.macrotisexam.models.Filter;
 import com.greenfox.macrotis.macrotisexam.services.AttractionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MainController {
@@ -34,8 +32,9 @@ public class MainController {
   }
 
   @GetMapping("/edit/{id}")
-  public String editAttraction(@PathVariable(value = "id") int id, Model model) {
-    model.addAttribute("editAttribute", attractionService.getAttraction(id));
+  public String showEditAttraction(@PathVariable(value = "id") int id, Model model) {
+    model.addAttribute("newAttraction", attractionService.getAttraction(id));
+    model.addAttribute("attractionlist", attractionService.getAllAttractions());
     return "index";
   }
 }

@@ -1,6 +1,7 @@
 package com.greenfox.macrotis.macrotisexam.services;
 
 import com.greenfox.macrotis.macrotisexam.models.Attractions;
+import com.greenfox.macrotis.macrotisexam.models.Filter;
 import com.greenfox.macrotis.macrotisexam.repositories.AttractionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,14 @@ public class AttractionServiceImpl implements AttractionService {
   @Override
   public Attractions getAttraction(int id) {
     return attractionRepository.findById(id).get();
+  }
+
+  @Override
+  public Filter filterAttractions(String city, String category) {
+    Filter filter = new Filter();
+
+
+
+    return null;
   }
 }

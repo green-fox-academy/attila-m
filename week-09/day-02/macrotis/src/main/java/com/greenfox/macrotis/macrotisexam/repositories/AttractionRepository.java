@@ -10,5 +10,7 @@ import java.util.List;
 public interface AttractionRepository extends CrudRepository<Attractions, Integer> {
 
   List<Attractions> findAll();
-
+  List<AttractionRepository> findByCity(String city);
+  List<AttractionRepository> findByCategory(String category);
+  List<AttractionRepository> findByCityAndCategory(String city, String category);
 }
