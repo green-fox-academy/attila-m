@@ -1,7 +1,6 @@
 package com.greenfox.macrotis.macrotisexam.controllers;
 
 import com.greenfox.macrotis.macrotisexam.models.Attractions;
-import com.greenfox.macrotis.macrotisexam.models.Filter;
 import com.greenfox.macrotis.macrotisexam.services.AttractionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -33,7 +32,7 @@ public class MainController {
 
   @GetMapping("/edit/{id}")
   public String showEditAttraction(@PathVariable(value = "id") int id, Model model) {
-    model.addAttribute("newAttraction", attractionService.getAttraction(id));
+    model.addAttribute("newAttraction",   attractionService.getAttraction(id));
     model.addAttribute("attractionlist", attractionService.getAllAttractions());
     return "index";
   }
