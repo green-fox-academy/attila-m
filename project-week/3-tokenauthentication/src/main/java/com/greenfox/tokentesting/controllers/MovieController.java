@@ -5,10 +5,7 @@ import com.greenfox.tokentesting.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,8 +25,13 @@ public class MovieController {
     return ResponseEntity.status(HttpStatus.OK).body(movieService.getAllMovies());
   }
 
+  @GetMapping("/list")
+  public List<Movie> getAllMovies() {
+    return movieService.getAllMovies();
+  }
+
   @PostMapping("/add")
-  public String saveMovie(Movie movie) {
+  public String saveMovie(@RequestBody Movie movie) {
     movieService.saveMovie(movie);
     return "Movie Saved";
   }
