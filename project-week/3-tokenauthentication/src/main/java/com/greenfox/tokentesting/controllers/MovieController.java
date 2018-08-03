@@ -5,9 +5,8 @@ import com.greenfox.tokentesting.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("movies")
@@ -25,9 +24,10 @@ public class MovieController {
     return ResponseEntity.status(HttpStatus.OK).body(movieService.getAllMovies());
   }
 
-  @GetMapping("/list")
-  public List<Movie> getAllMovies() {
-    return movieService.getAllMovies();
+  @GetMapping("/admin")
+  @PreAuthorize("hasanyrole('ADMIN')")
+  public ResponseEntity<?> isAdmin() {
+    return new ResponseEntity<>("You have admin rights", HttpStatus.OK);
   }
 
   @PostMapping("/add")
