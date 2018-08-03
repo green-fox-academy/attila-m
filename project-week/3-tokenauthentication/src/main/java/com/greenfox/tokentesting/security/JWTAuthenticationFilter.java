@@ -21,8 +21,7 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
-import static com.greenfox.tokentesting.security.SecurityConstants.EXPIRATION_TIME;
-import static com.greenfox.tokentesting.security.SecurityConstants.SECRET;
+import static com.greenfox.tokentesting.security.SecurityConstants.*;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
   private AuthenticationManager authenticationManager;
@@ -51,6 +50,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
             .setExpiration(Date.from(expirationTimeUTC.toInstant()))
             .signWith(SignatureAlgorithm.ES256, SECRET)
             .compact();
-
+    response.getWriter().write(token);
+    response.addHeader(HEADER_STRING, TOKEN_PREFIX + token);
   }
 }
