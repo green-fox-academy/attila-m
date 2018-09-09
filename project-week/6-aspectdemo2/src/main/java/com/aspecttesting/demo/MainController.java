@@ -17,6 +17,11 @@ public class MainController {
   @GetMapping("/return")
   public String returnAspect() {
     System.out.println("ReturnAspect called.");
+    save("NAME NAME");
     return "PARAMETER";
+  }
+
+  private void save(String name_name) {
+    System.out.println(name_name + "saved.");
   }
 }
